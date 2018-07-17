@@ -12,14 +12,19 @@ package com.ecomerce.userservice.userservice.model;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  * @author Youans Ezzat
  */
 @Getter
 @Setter
+@Entity
 public class User {
-    private String name;
+    @Id
     private long id;
+    private String name;
     private String email;
     public User(long id,String name){
             this.id=id;
